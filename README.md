@@ -13,3 +13,8 @@ When they leave they tap, sign out, then it auto fills the sign out time in the 
 Theres some nice little analytics for paper saved, busiest day etc.
 
 The history can be viewed and download to CSV.
+
+
+
+For WAMP, install it drop the OfficeSignIn folder in the 'www' folder in the WAMP install location.  
+You should then be able to get to it using 127.0.0.1/officesignin
