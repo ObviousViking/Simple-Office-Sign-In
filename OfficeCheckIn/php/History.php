@@ -1,5 +1,5 @@
 <?php
-include '../includes/DB_Connect.php'; // Adjust the path as needed
+include '../includes/DB_Connect.php';
 
 // Check for CSV download request
 if (isset($_POST['download_csv'])) {
@@ -27,7 +27,7 @@ if (!empty($filterDate)) {
     $sql = "SELECT id, name, organization, signInTime, signOutTime FROM visitors WHERE DATE(signInTime) = ? ORDER BY signInTime ASC";
     $stmt = $db->prepare($sql);
     $stmt->bindValue(1, $filterDate, SQLITE3_TEXT);
-    $result = $stmt->execute(); // This will return a SQLite3Result object
+    $result = $stmt->execute(); 
 } else {
     $sql = "SELECT id, name, organization, signInTime, signOutTime FROM visitors ORDER BY signInTime ASC";
     $result = $db->query($sql);
@@ -40,7 +40,6 @@ if ($result) {
     }
 }
 
-// The SQLite3 statement doesn't need to be closed like MySQLi, but you can unset if desired
 if (isset($stmt)) {
     unset($stmt);
 }
