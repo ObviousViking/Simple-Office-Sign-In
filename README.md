@@ -17,4 +17,4 @@ The history can be viewed and download to CSV.
 
 
 For WAMP, install it, then drop the OfficeCheckIn folder in the 'www' folder in the WAMP install location.  
-You should then be able to get to it using 127.0.0.1/officesignin
+You should then be able to get to it using 127.0.0.1/OfficeCheckIn
