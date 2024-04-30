@@ -159,7 +159,6 @@ if ($totalCountRow['total'] > 1) {
             <section id="current-visitors">
                 <h2>Current Vistors</h2>
                 <div class="visitor-grid">
-                    <!-- Updated class from 'visitor-list' to 'visitor-grid' -->
                     <?php if (!empty($visitors)): ?>
                         <?php foreach ($visitors as $visitor): ?>
                             <div class="visitor-entry">
