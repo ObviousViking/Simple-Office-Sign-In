@@ -5,7 +5,7 @@
 // Using include 'DB_Connect.php';
 
 // SQLite database file path
-$dbPath = __DIR__ . '/../db/checkin.sqlite';  // Correct the path by adding a slash
+$dbPath = __DIR__ . '/../db/checkin.sqlite';  
 
 // Create connection
 $db = new SQLite3($dbPath);
