@@ -1,0 +1,325 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styles */
+body {
+    background-color: #121212;
+    /* Dark background for better contrast */
+    color: #E0E0E0;
+    /* Light grey text for readability */
+    font-family: 'Arial', sans-serif;
+    /* Ensures text is optimally readable */
+    line-height: 1.6;
+    /* Improves text readability */
+}
+
+/* General adjustments to the dashboard container */
+#dashboard {
+    display: flex;
+    flex-direction: row;
+    /* Ensures main and side content are side by side */
+    align-items: flex-start;
+    /* Aligns items to the top */
+    justify-content: space-between;
+    /* Distributes space between columns */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1E1E1E;
+}
+
+/* Header styling to ensure it's visible and not obscured */
+header {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 0px;
+    /* Ensure there's space below the header */
+    background-color: #262626;
+    border-radius: 8px;
+    z-index: 100;
+    /* Higher z-index to keep it above other content */
+}
+
+/* Main content and side content adjustments for better layout */
+.main-content {
+    flex: 3;
+    /* Takes more space */
+    padding: 20px;
+    margin-right: 20px;
+    /* Ensures space between main and side content */
+}
+
+.side-content {
+    flex: 1;
+    /* Smaller portion of space */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #262626;
+    border-radius: 8px;
+}
+
+/* Headers */
+h1,
+h2 {
+    color: #FFD700;
+    /* Gold color to highlight headings */
+    text-align: center;
+    /* Centers the headings */
+    margin: 10px 0;
+    /* Adds vertical spacing around headings */
+}
+
+#signInForm .form-row {
+    display: flex;
+    align-items: flex-start;
+    /* Aligns items at the top of the container */
+}
+
+#signInForm .input-group {
+    display: flex;
+    flex-direction: column;
+    /* Stacks label and input vertically */
+    flex-grow: 1;
+    /* Allows each group to take equal width */
+    margin-right: 20px;
+    /* Adds space between the input groups and the button */
+}
+
+#signInForm .form-row {
+    display: flex;
+    align-items: stretch;
+    /* Ensures the button stretches to match the height of the inputs-container */
+}
+
+#signInForm .inputs-container {
+    display: flex;
+    flex-direction: column;
+    /* Stacks the input groups vertically */
+    flex-grow: 1;
+    /* Takes up all available space except what the button needs */
+}
+
+#signInForm .input-group {
+    margin-bottom: 10px;
+    /* Adds space between input fields */
+}
+
+#signInForm label {
+    display: block;
+    /* Ensures the label is on its own line */
+    margin-bottom: 5px;
+    /* Space between label and input */
+}
+
+#signInForm input[type="text"] {
+    width: 100%;
+    /* Ensures inputs take the full width of their container */
+}
+
+#signInForm button {
+    padding: 10px 20px;
+    /* Adequate padding for the button */
+    flex: 0 0 auto;
+    /* Button does not grow or shrink */
+    width: 150px;
+}
+
+input[type="text"] {
+    width: 100%;
+    /* Full width to maximize usability */
+    padding: 12px;
+    /* Padding for ease of text entry */
+    margin-top: 8px;
+    /* Separates inputs vertically */
+    border: 1px solid #333;
+    /* Subtle border around inputs */
+    background-color: #333;
+    /* Dark input background */
+    color: #FFF;
+    /* Text color for inputs */
+    border-radius: 5px;
+    /* Rounded corners on inputs */
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    /* Full width for easier clickability */
+    background-color: #0A84FF;
+    /* Bright blue background for contrast */
+    color: #FFF;
+    /* White text for legibility */
+    padding: 12px;
+    /* Padding for touch friendliness */
+    margin-top: 10px;
+    /* Space above the button */
+    border: none;
+    /* No border for a cleaner look */
+    border-radius: 5px;
+    /* Rounded corners for buttons */
+    cursor: pointer;
+    /* Indicates the button is clickable */
+}
+
+button:hover {
+    background-color: #005ECB;
+    /* Darker blue on hover for interactive feedback */
+}
+
+/* Link Styles */
+a {
+    color: #4DD0E1;
+    /* Cyan color for links */
+    text-decoration: none;
+    /* No underline to keep it clean */
+    display: inline-block;
+    /* Allows for padding and margin */
+    margin-top: 10px;
+    /* Space above link */
+    padding: 10px;
+    /* Makes the link easier to click */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover for indication */
+}
+
+/* Grid Container Setup */
+#current-visitors .visitor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Creates three columns */
+    grid-gap: 20px;
+    /* Space between grid items */
+    justify-content: center;
+    /* Center grid items horizontally if they don't fill the row */
+    padding: 10px;
+}
+
+/* Visitor Entry Box Styles */
+#current-visitors .visitor-entry {
+    background-color: #2a2a2a;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#current-visitors .visitor-info {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#current-visitors .visitor-name,
+#current-visitors .visitor-organization {
+    display: block;
+    color: #FFF;
+}
+
+#current-visitors .visitor-entry button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    /* Adjust if necessary for design preference */
+    align-self: center;
+    /* Aligns the button to the center */
+}
+
+#current-visitors .visitor-entry button:hover {
+    background-color: #555;
+}
+
+#visitorAnalytics {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#environmentalImpact,
+#visitorAnalytics,
+.history-link {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #333;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.history-link button {
+    width: 100%;
+    /* Ensures button fills the container width */
+    padding: 12px;
+    background-color: #0A84FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.history-link button:hover {
+    background-color: #005ECB;
+}
+
+/* Responsive adjustments for better mobile support */
+@media (max-width: 800px) {
+    #dashboard {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .side-content {
+        width: 100%;
+        /* Full width on smaller screens */
+        margin-right: 0;
+        /* Remove margin on smaller screens */
+    }
+}
+
+@media (max-width: 800px) {
+    #current-visitors .visitor-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Switches to two columns on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    #current-visitors .visitor-grid {
+        grid-template-columns: 1fr;
+        /* Single column layout on very small screens */
+    }
+}
+
+
+
+/*sign in button*/
+button {
+    background: none;
+    /* Removes any background color */
+    border: none;
+    /* Removes border */
+    cursor: pointer;
+    /* Keeps the pointer to indicate clickability */
+}
+
+button img {
+    width: 100px;
+    /* Example width, adjust according to your image size */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Removes any extra space around the image */
+}
